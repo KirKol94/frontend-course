@@ -1,22 +1,14 @@
-import './styles/index.scss'
-
+import { Suspense } from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
-import { Suspense, useState } from 'react'
+import './styles/index.scss'
 
 import { AboutPageAsync } from './pages/AboutPage/AboutPageAsync'
 import { MainPageAsync } from './pages/MainPage/MainPageAsync'
-
-export enum Themes {
-    LIGHT = 'light',
-    DARK = 'dark'
-}
+import { useTheme } from './theme/useTheme'
 
 export const App = () => {
-    const [theme, setTheme] = useState<Themes>(Themes.LIGHT)
+    const { theme, toggleTheme } = useTheme()
 
-    const toggleTheme = () => {
-        setTheme(theme === Themes.DARK ? Themes.LIGHT : Themes.DARK)
-    }
     return (
         <div className={`app ${theme}`}>
             <ul className='nav'>
