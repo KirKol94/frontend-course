@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button, ThemeButton } from "shared/ui/Button";
 import SideBarIsCollapsed from "shared/assets/icons/sidebarIsCollapsed.svg";
 import SideBarIsOpen from "shared/assets/icons/sidebarIsOpen.svg";
-import { ThemeSwitcher } from "shared/ui/ThemeSwitcher";
+import { ThemeSwitcher } from "widgets/ThemeSwitcher";
 
 interface SidebarProps {
   className?: string;
