@@ -1,0 +1,21 @@
+.Sidebar {
+    position: relative;
+    padding: 20px;
+    height: calc(100vh - var(--navbar-height));
+    background-color: var(--inverted-bg-color);
+    width: var(--sidebar-width);
+    transition: width 500ms;
+}
+
+.collapsed {
+    width: var(--sidebar-collapsed-width);
+}
+
+.icons {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}

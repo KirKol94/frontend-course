@@ -18,7 +18,11 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
       className={classNames(cls.ThemeSwitcher, {}, [className])}
       theme={ThemeButton.CLEAR}
     >
-      {theme === Theme.DARK ? <DarkMode /> : <LightMode />}
+      {theme === Theme.DARK ? (
+        <DarkMode width={40} height={40} fill="var(--bg-color)" />
+      ) : (
+        <LightMode width={40} height={40} fill="var(--bg-color)" />
+      )}
     </Button>
   );
 };
