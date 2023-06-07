@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-idiomatic-order"
+  ],
+  "plugins": [
+    "stylelint-codeguide"
+  ],
+  "rules": {
+    "codeguide/color-hex-case": "lower",
+    "codeguide/number-leading-zero": "always",
+    "codeguide/unit-case": "lower",
+    "selector-class-pattern": null
+  }
+}
