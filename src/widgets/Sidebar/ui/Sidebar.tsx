@@ -5,6 +5,7 @@ import { Button, ThemeButton } from "shared/ui/Button";
 import SideBarIsCollapsed from "shared/assets/icons/sidebarIsCollapsed.svg";
 import SideBarIsOpen from "shared/assets/icons/sidebarIsOpen.svg";
 import { ThemeSwitcher } from "widgets/ThemeSwitcher";
+import { LanguageSwitcher } from "widgets/LanguageSwitcher";
 
 interface SidebarProps {
   className?: string;
@@ -32,7 +33,8 @@ export const Sidebar = ({ className }: SidebarProps) => {
       </Button>
 
       <div className={cls.icons}>
-        <ThemeSwitcher className={cls.icon} />
+        <LanguageSwitcher />
+        <ThemeSwitcher />
       </div>
     </div>
   );
