@@ -1,5 +1,7 @@
 {
-  "Главная": "Main page",
+  "Главная": "Main",
   "О нас": "About",
-  "Страница не найдена": "This page is not a found"
+  "Страница не найдена": "This page is not a found",
+  "Что-то пошло не так": "Something went wrong",
+  "Обновите страницу": "Refresh the page"
 }
