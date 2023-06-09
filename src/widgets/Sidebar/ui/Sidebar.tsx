@@ -1,18 +1,19 @@
-import { classNames } from 'shared/lib/classNames/classNames';
-import { useState } from 'react';
 import { Button, ThemeButton } from 'shared/ui/Button';
+
+import { LanguageSwitcher } from 'widgets/LanguageSwitcher';
 import SideBarIsCollapsed from 'shared/assets/icons/sidebarIsCollapsed.svg';
 import SideBarIsOpen from 'shared/assets/icons/sidebarIsOpen.svg';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
-import { LanguageSwitcher } from 'widgets/LanguageSwitcher';
+import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Sidebar.module.scss';
+import { useState } from 'react';
 
 interface SidebarProps {
   className?: string;
 }
 
 export const Sidebar = ({ className }: SidebarProps) => {
-    const [isCollapsed, setIsCollapsed] = useState(true);
+    const [isCollapsed, setIsCollapsed] = useState(false);
 
     const onCollapseToggle = () => {
         setIsCollapsed((prev) => !prev);
@@ -20,11 +21,16 @@ export const Sidebar = ({ className }: SidebarProps) => {
 
     return (
         <div
+            data-testid="sidebar"
             className={classNames(cls.Sidebar, { [cls.collapsed]: isCollapsed }, [
                 className,
             ])}
         >
-            <Button theme={ThemeButton.CLEAR} onClick={onCollapseToggle}>
+            <Button
+                data-testid="sidebar-toggle"
+                theme={ThemeButton.CLEAR}
+                onClick={onCollapseToggle}
+            >
                 {isCollapsed ? (
                     <SideBarIsCollapsed stroke="var(--bg-color)" width={40} height={40} />
                 ) : (
