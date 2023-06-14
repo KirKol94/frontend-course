@@ -1,6 +1,10 @@
 import {
-    Component, ErrorInfo, ReactNode, Suspense,
+    Component,
+    ErrorInfo,
+    ReactNode,
+    Suspense,
 } from 'react';
+
 import { PageError } from 'widgets/PageError';
 
 interface ErrorBoundaryProps {
@@ -22,6 +26,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     }
 
     componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+        // eslint-disable-next-line no-console
         console.log(error, errorInfo);
     }
 

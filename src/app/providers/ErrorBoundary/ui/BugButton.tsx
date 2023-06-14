@@ -1,8 +1,11 @@
-import { useState, useEffect } from 'react';
 import { Button, ThemeButton } from 'shared/ui/Button';
+import { useEffect, useState } from 'react';
+
+import { useTranslation } from 'react-i18next';
 
 export const BugButton = () => {
     const [isError, setisError] = useState(false);
+    const { t } = useTranslation();
 
     const onThrowError = () => {
         setisError((p) => !p);
@@ -19,8 +22,7 @@ export const BugButton = () => {
             theme={ThemeButton.CLEAR}
             onClick={onThrowError}
         >
-            Throw error
-
+            {t('Throw error')}
         </Button>
     );
 };

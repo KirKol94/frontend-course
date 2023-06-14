@@ -14,10 +14,13 @@ describe('classNames', () => {
             .toBe('test test3 test2');
     });
 
-    test('Передача 3 аргуметов - строки, объекта mode и массива. В объекте mode одно значение false - его не будет в итоге', () => {
-        expect(classNames('test', { test2: true, test4: false }, ['test3']))
-            .toBe('test test3 test2');
-    });
+    test(
+        '3 аргумента - строки, объекта mode и массива. В объекте mode одно значение false - его не будет в итоге',
+        () => {
+            expect(classNames('test', { test2: true, test4: false }, ['test3']))
+                .toBe('test test3 test2');
+        },
+    );
 
     test('Передав пустую строку будет пустая строка', () => {
         expect(classNames(''))
